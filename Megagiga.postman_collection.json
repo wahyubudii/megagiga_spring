@@ -1,0 +1,269 @@
+{
+	"info": {
+		"_postman_id": "0b36f584-9c83-409c-9e2a-2b90cdab89cb",
+		"name": "Megagiga",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Barang",
+			"item": [
+				{
+					"name": "Get All Barang",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/barang",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"barang"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Penjualan By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/barang/57626602-0036-496c-885e-ec63fc48dec7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"barang",
+								"57626602-0036-496c-885e-ec63fc48dec7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Barang By Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/barang/536518d8-bd01-487f-ae6b-3ebff490cb2f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"barang",
+								"536518d8-bd01-487f-ae6b-3ebff490cb2f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Barang",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Macbook M1 Pro 13 Inch 2022\",\r\n    \"selling_price\": 14000000,\r\n    \"purchase_price\": 12500000,\r\n    \"stock\": 5,\r\n    \"category\": \"Laptop\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/barang",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"barang"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Barang",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"536518d8-bd01-487f-ae6b-3ebff490cb2f\",\r\n    \"name\": \"Macbook M1 Pro 13 Inch 2022\",\r\n    \"selling_price\": 14500000,\r\n    \"purchase_price\": 12500000,\r\n    \"stock\": 5,\r\n    \"category\": \"Laptop\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/barang",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"barang"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Penjualan",
+			"item": [
+				{
+					"name": "Get All Penjualan",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/penjualan",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"penjualan"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Penjualan By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/penjualan/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"penjualan",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Penjualan By Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/penjualan/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"penjualan",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Penjualan",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"factur_date\": \"09/05/2023\",\r\n    \"name\": \"John Doe\",\r\n    \"barangs\": [\r\n        {\r\n            \"id\": \"57626602-0036-496c-885e-ec63fc48dec7\",\r\n            \"stock\": 1\r\n        },\r\n        {\r\n            \"id\": \"d5ecc5d1-4b9d-4fd7-bdf5-85e3cb8865bb\",\r\n            \"stock\": 1\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/penjualan",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"penjualan"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Penjualan",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 2,\r\n    \"factur_date\": \"11/05/2023\",\r\n    \"name\": \"John Doe\",\r\n    \"jumlah\": 2,\r\n    \"price\": 50000000,\r\n    \"total_price\": 50000000,\r\n    \"barangs\": [\r\n        {\r\n            \"id\": \"d5ecc5d1-4b9d-4fd7-bdf5-85e3cb8865bb\",\r\n            \"name\": \"Macbook M2 Air 2022\",\r\n            \"selling_price\": 18000000,\r\n            \"purchase_price\": 16500000,\r\n            \"stock\": 1,\r\n            \"category\": \"Laptop\"\r\n        },\r\n        {\r\n            \"id\": \"57626602-0036-496c-885e-ec63fc48dec7\",\r\n            \"name\": \"Macbook M2 Pro 14 Inch 2022\",\r\n            \"selling_price\": 32000000,\r\n            \"purchase_price\": 31000000,\r\n            \"stock\": 1,\r\n            \"category\": \"Laptop\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/penjualan",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"penjualan"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
